@@ -1,0 +1,16 @@
+{
+  "name": "dummy-project",
+  "version": "1.0.0",
+  "description": "\"# Dummy-Project\"",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "tailwindcss build src/style.css -o public/style.css",
+    "dev" : "tailwindcss -i ./src/style.css -o ./dist/style.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
+  }
+}
