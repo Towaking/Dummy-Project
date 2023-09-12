@@ -5,13 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/dist/style.css" />
     <title>Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body class="w-screen bg-[#19173D]  ">
+  <body class="w-screen bg-[#19173D] md:overflow-hidden">
     <main class="w-screen md:h-screen md:flex relative md:items-center">
-      <section class="overscroll-none md:relative absolute">
-        <img src="/dist/assets/images/Group 1.png" loading="lazy" class="md:h-screen md:rotate-0 h-screen w-[100%]">
+      <section class="overscroll-none absolute">
+        <img
+          src="/dist/assets/images/Group 1.png"
+          loading="lazy"
+          class="md:h-screen md:rotate-0 h-screen w-[100%]"
+        />
       </section>
-      <section class="lg:absolute lg:h-4/5 md:w-[90%] lg:w-1/2 lg:m-0 lg:right-0 md:m-20 h-screen w-screen  bg-white">
+      <section class="z-10 flex flex-col gap-10 m-10 max-w-[100%] min-w-[40%]">
+        <h1
+          class="text-white font-bold text-3xl break-words font-Chakra w-5/12 text-clip tracking-wider ml-24 "
+        >
+          Save your money from today!
+        </h1>
+        <img
+          src="/dist/assets/images/Logo1.png"
+          alt="logo"
+          class="ml-44 w-4/6 "
+          loading="lazy"
+          draggable="false"
+        />
+      </section>
+      <section
+        class="lg:absolute md:w-[90%] lg:w-2/3 lg:m-0 lg:right-0 z-0 md:m-20 h-screen w-screen translate-x-0 lg:translate-x-10 md:rounded-[50px] border-white bg-white"
+      >
         asdsa
       </section>
     </main>
