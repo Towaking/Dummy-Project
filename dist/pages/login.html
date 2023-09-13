@@ -2,7 +2,10 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
     <link rel="stylesheet" href="/dist/style.css" />
     <title>Login</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -21,25 +24,109 @@
           class="md:h-screen md:rotate-0 h-screen w-[100%]"
         />
       </section>
-      <section class="z-10 flex flex-col gap-10 m-10 max-w-[100%] min-w-[40%]">
+      <section
+        class="z-10 flex flex-col gap-10 ml-[5%] max-w-[100%] min-w-[40%]"
+      >
         <h1
-          class="text-white font-bold text-3xl break-words font-Chakra w-5/12 text-clip tracking-wider ml-24 "
+          class="text-white font-bold text-3xl break-words font-Chakra w-5/12 text-clip tracking-wider ml-24"
         >
           Save your money from today!
         </h1>
         <img
           src="/dist/assets/images/Logo1.png"
           alt="logo"
-          class="ml-44 w-4/6 "
+          class="ml-44 w-4/6"
           loading="lazy"
           draggable="false"
         />
       </section>
       <section
-        class="lg:absolute md:w-[90%] lg:w-2/3 lg:m-0 lg:right-0 z-0 md:m-20 h-screen w-screen translate-x-0 lg:translate-x-10 md:rounded-[50px] border-white bg-white"
+        class="lg:absolute md:w-[90%] p-20 gap-24 items-center justify-center lg:w-2/3 lg:m-0 lg:right-0 z-0 md:m-20 flex flex-col h-screen w-screen translate-x-0 lg:translate-x-10 md:rounded-[50px] border-white bg-white"
       >
-        asdsa
+        <div class="font-Chakra text-[3rem] text-[#2F3786] font-bold">Login Account</div>
+        <div class="w-[70%] flex flex-col gap-24">
+          <div class="relative">
+            <input
+              class=" px-5 w-full peer font-Chakra outline-none border-b-2 border-black transition-all delay-500"
+              type="email"
+              name="email"
+              id="email"
+            />
+            <label
+              id="email-label"
+              class="absolute left-5 -top-2 text-2xl peer-focus:-top-8 font-Chakra text-gray-500 transition-all ease-in"
+              for="email"
+              >email</label
+            >
+          </div>
+          <div class="relative">
+            <input
+              class="px-5 w-full peer font-Chakra outline-none border-b-2 border-black transition-all delay-500"
+              type="password"
+              name="pw"
+              id="pw"
+            />
+            <label
+              id="pw-label"
+              class="absolute left-5 -top-2 text-2xl peer-focus:-top-8 font-Chakra text-gray-500  transition-all ease-in"
+              for="pw"
+              >Password</label
+            >
+          </div>
+        </div>
+        <div class="w-[70%] rounded-full bg-gradient-to-t from-[#8690F9] to-[#4C4DE2]">
+          <button class="p-5 text-xl text-white font-Chakra w-full">Login</button>
+        </div>
+        <div class="font-Chakra text-3xl">
+          <span>Doesn’t have an account yet? <a href="/dist/pages/register.html" class="text-blue-500 underline">Sign up</a></span>
+        </div>
       </section>
     </main>
   </body>
+  <script>
+    let label = document.getElementById("email-label");
+    document.getElementById("email").addEventListener("input", (event) => {
+      let input = event.target;
+
+      if (event.target.value) {
+        
+        ["text-xs", "-top-8", "text-purple-600"].forEach((c) =>
+          label.classList.add(c)
+        );
+        ["text-gray-500"].forEach((c) =>
+          label.classList.remove(c)
+        );
+      } else {
+
+        ["text-xs", "-top-8", "text-purple-600"].forEach((c) =>
+          label.classList.remove(c)
+        );
+        ["text-gray-500"].forEach((c) =>
+          label.classList.add(c)
+        );
+      }
+    });
+    let labels = document.getElementById("pw-label");
+    document.getElementById("pw").addEventListener("input", (event) => {
+      let input = event.target;
+
+      if (event.target.value) {
+        
+        ["text-xs", "-top-8", "text-purple-600"].forEach((c) =>
+          labels.classList.add(c)
+        );
+        ["text-gray-500"].forEach((c) =>
+          labels.classList.remove(c)
+        );
+      } else {
+
+        ["text-xs", "-top-8", "text-purple-600"].forEach((c) =>
+          labels.classList.remove(c)
+        );
+        ["text-gray-500"].forEach((c) =>
+          labels.classList.add(c)
+        );
+      }
+    });
+  </script>
 </html>
